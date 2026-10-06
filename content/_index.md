@@ -416,10 +416,10 @@ Awards total 2,000 USD. In addition, we will offer travel and registration suppo
 ## Organizers {#organizers}
 
 <div class="people-grid organizer-photo-grid">
+<div class="person-card"><img class="organizer-photo" src="img/organizers/samuel-ruiperez-campillo.jpeg" alt="Samuel Ruiperez-Campillo"><h4>Samuel Ruiperez-Campillo</h4><p class="person-affiliation">Massachusetts Institute of Technology, US</p><p class="person-role">Executive Co-Chair & Scientific Co-Chair</p></div>
+<div class="person-card"><img class="organizer-photo" src="img/organizers/silke-muehlstedt.jpeg" alt="Silke Muehlstedt"><h4>Silke Muehlstedt</h4><p class="person-affiliation">ETH Zurich, CH</p><p class="person-role">Executive Co-Chair & Scientific Co-Chair</p></div>
 <div class="person-card"><img class="organizer-photo" src="img/organizers/cristina-almagro-perez.jpeg" alt="Cristina Almagro-Perez"><h4>Cristina Almagro-Perez</h4><p class="person-affiliation">Harvard-MIT HST and Brigham and Women's Hospital, US</p><p class="person-role">Operations & Program Delivery Chair</p></div>
 <div class="person-card"><img class="organizer-photo" src="img/organizers/sonia-laguna.jpeg" alt="Sonia Laguna"><h4>Sonia Laguna</h4><p class="person-affiliation">Apple, FR</p><p class="person-role">Program Committee & External Relations Chair</p></div>
-<div class="person-card"><img class="organizer-photo" src="img/organizers/silke-muehlstedt.jpeg" alt="Silke Muehlstedt"><h4>Silke Muehlstedt</h4><p class="person-affiliation">ETH Zurich, CH</p><p class="person-role">Executive Co-Chair & Scientific Co-Chair</p></div>
-<div class="person-card"><img class="organizer-photo" src="img/organizers/samuel-ruiperez-campillo.jpeg" alt="Samuel Ruiperez-Campillo"><h4>Samuel Ruiperez-Campillo</h4><p class="person-affiliation">Massachusetts Institute of Technology, US</p><p class="person-role">Executive Co-Chair & Scientific Co-Chair</p></div>
 </div>
 
 ### Senior Advisory Board
