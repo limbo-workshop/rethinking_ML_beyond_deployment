@@ -433,18 +433,18 @@ Awards total 2,000 USD. In addition, we will offer travel and registration suppo
 | Time | Theme / Session | Lead / Speaker |
 | --- | --- | --- |
 | 09:10-09:15 | Opening Remarks | Organizers |
-| **09:15-10:30** | **ML Adaptation & Uncertainty** | **Theme block** |
+| **09:15-10:30** | **ML Adaptation & Uncertainty** |  |
 | 09:15-09:35 | Invited Talk I | Razvan Pascanu |
 | 09:40-10:00 | Invited Talk II | Yarin Gal |
 | 10:00-10:15 | Spotlight Talk I - Selected Submission | Presenter 1 |
 | 10:15-10:30 | Spotlight Talk II - Selected Submission | Presenter 2 |
 | 10:30-11:15 | Coffee Break & Poster Session I | Poster Presenters |
-| **11:15-12:50** | **Clinical Deployment Under Shift** | **Theme block** |
+| **11:15-12:50** | **Clinical Deployment Under Shift** |  |
 | 11:15-11:35 | Invited Talk III | Enzo Ferrante |
 | 11:40-12:00 | Invited Talk IV | Olivier Salvado |
 | 12:05-12:50 | Panel Discussion | Moderators / Panelists |
 | 12:50-14:00 | Lunch & Networking | - |
-| **14:00-15:40** | **Auditing Dynamic Clinical ML** | **Theme block** |
+| **14:00-15:40** | **Auditing Dynamic Clinical ML** |  |
 | 14:00-14:20 | Invited Talk V | Irene Chen |
 | 14:25-14:45 | Invited Talk VI | Lana Tikhomirov |
 | 14:50-15:05 | Spotlight Talk III - Selected Submission | Presenter 3 |
