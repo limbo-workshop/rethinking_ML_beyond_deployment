@@ -134,6 +134,68 @@ title = "LiMBo: Living Clinical Models @ ICLR 2027"
     font-size: 0.96rem;
 }
 
+.flip-card {
+    cursor: pointer;
+    perspective: 1200px;
+    background: transparent;
+    border: 0;
+    padding: 0;
+}
+
+.flip-card:focus-visible {
+    outline: 2px solid #4a6fa5;
+    outline-offset: 4px;
+    border-radius: 8px;
+}
+
+.flip-inner {
+    display: grid;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip-card.is-flipped .flip-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-front,
+.flip-back {
+    grid-area: 1 / 1;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    background: rgba(255, 255, 255, 0.62);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.flip-back {
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #fff;
+}
+
+.organizer-photo-grid .flip-card .organizer-bio {
+    color: #333;
+    font-size: 0.92rem;
+    line-height: 1.5;
+    text-align: left;
+}
+
+.organizer-photo-grid .flip-card .flip-hint {
+    color: #888;
+    font-size: 0.8rem;
+    margin-top: 0.75rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .flip-inner {
+        transition: none;
+    }
+}
+
 #schedule table td:first-child,
 #schedule table th:first-child {
     white-space: nowrap;
@@ -370,26 +432,27 @@ Awards total 2,000 USD. In addition, we will offer travel and registration suppo
 
 | Time | Theme / Session | Lead / Speaker |
 | --- | --- | --- |
-| 09:00-09:15 | Opening Remarks | Organizers |
-| 09:15-10:30 | ML adaptation & uncertainty | Theme block |
+| 09:10-09:15 | Opening Remarks | Organizers |
+| **09:15-10:30** | **ML Adaptation & Uncertainty** | **Theme block** |
 | 09:15-09:35 | Invited Talk I | Razvan Pascanu |
 | 09:40-10:00 | Invited Talk II | Yarin Gal |
 | 10:00-10:15 | Spotlight Talk I - Selected Submission | Presenter 1 |
 | 10:15-10:30 | Spotlight Talk II - Selected Submission | Presenter 2 |
 | 10:30-11:15 | Coffee Break & Poster Session I | Poster Presenters |
-| 11:15-12:50 | Clinical deployment under shift | Theme block |
+| **11:15-12:50** | **Clinical Deployment Under Shift** | **Theme block** |
 | 11:15-11:35 | Invited Talk III | Enzo Ferrante |
 | 11:40-12:00 | Invited Talk IV | Olivier Salvado |
 | 12:05-12:50 | Panel Discussion | Moderators / Panelists |
 | 12:50-14:00 | Lunch & Networking | - |
-| 14:00-15:15 | Auditing dynamic clinical ML | Theme block |
+| **14:00-15:40** | **Auditing Dynamic Clinical ML** | **Theme block** |
 | 14:00-14:20 | Invited Talk V | Irene Chen |
-| 14:25-14:40 | Spotlight Talk III - Selected Submission | Presenter 3 |
-| 14:40-14:55 | Spotlight Talk IV - Selected Submission | Presenter 4 |
-| 14:55-15:15 | Tiny Papers Lightning Talks | Tiny Papers Presenters |
-| 15:15-16:00 | Coffee Break & Poster Session II | Poster Presenters |
-| 16:00-16:15 | Open Q&A and Discussion | Session Chair |
-| 16:15-16:30 | Closing Remarks & Awards | Organizers |
+| 14:25-14:45 | Invited Talk VI | Lana Tikhomirov |
+| 14:50-15:05 | Spotlight Talk III - Selected Submission | Presenter 3 |
+| 15:05-15:20 | Spotlight Talk IV - Selected Submission | Presenter 4 |
+| 15:20-15:40 | Tiny Papers Lightning Talks | Tiny Papers Presenters |
+| 15:40-16:25 | Coffee Break & Poster Session II | Poster Presenters |
+| 16:25-16:40 | Open Q&A and Discussion | Session Chair |
+| 16:40-16:50 | Closing Remarks & Awards | Organizers |
 
 </section>
 
@@ -405,6 +468,7 @@ Awards total 2,000 USD. In addition, we will offer travel and registration suppo
 <div class="person-card"><img class="speaker-photo" src="img/speakers/razvan-pascanu.jpeg" alt="Razvan Pascanu"><h4>Razvan Pascanu</h4><p class="person-affiliation">Google DeepMind and Mila, Canada</p><p class="person-role">Speaker & Panelist</p></div>
 <div class="person-card"><img class="speaker-photo" src="img/speakers/olivier-salvado.jpeg" alt="Olivier Salvado"><h4>Olivier Salvado</h4><p class="person-affiliation">Queensland University of Technology, AU</p><p class="person-role">Speaker & Panelist</p></div>
 <div class="person-card"><img class="speaker-photo" src="img/speakers/yarin-gal.jpeg" alt="Yarin Gal"><h4>Yarin Gal</h4><p class="person-affiliation">University of Oxford, UK</p><p class="person-role">Speaker & Panelist</p></div>
+<div class="person-card"><img class="speaker-photo" src="img/speakers/lana-tikhomirov.jpeg" alt="Lana Tikhomirov"><h4>Lana Tikhomirov</h4><p class="person-affiliation">Adelaide University, AU</p><p class="person-role">Speaker & Panelist</p></div>
 </div>
 
 </section>
@@ -416,11 +480,26 @@ Awards total 2,000 USD. In addition, we will offer travel and registration suppo
 ## Organizers {#organizers}
 
 <div class="people-grid organizer-photo-grid">
-<div class="person-card"><img class="organizer-photo" src="img/organizers/samuel-ruiperez-campillo.jpeg" alt="Samuel Ruiperez-Campillo"><h4>Samuel Ruiperez-Campillo</h4><p class="person-affiliation">Massachusetts Institute of Technology, US</p><p class="person-role">Executive Co-Chair & Scientific Co-Chair</p></div>
-<div class="person-card"><img class="organizer-photo" src="img/organizers/silke-muehlstedt.jpeg" alt="Silke Muehlstedt"><h4>Silke Muehlstedt</h4><p class="person-affiliation">ETH Zurich, CH</p><p class="person-role">Executive Co-Chair & Scientific Co-Chair</p></div>
-<div class="person-card"><img class="organizer-photo" src="img/organizers/cristina-almagro-perez.jpeg" alt="Cristina Almagro-Perez"><h4>Cristina Almagro-Perez</h4><p class="person-affiliation">Harvard-MIT HST and Brigham and Women's Hospital, US</p><p class="person-role">Operations & Program Delivery Chair</p></div>
-<div class="person-card"><img class="organizer-photo" src="img/organizers/sonia-laguna.jpeg" alt="Sonia Laguna"><h4>Sonia Laguna</h4><p class="person-affiliation">Apple, FR</p><p class="person-role">Program Committee & External Relations Chair</p></div>
+<div class="person-card flip-card" role="button" tabindex="0" aria-pressed="false" aria-label="Samuel Ruiperez-Campillo: show bio"><div class="flip-inner"><div class="flip-front"><img class="organizer-photo" src="img/organizers/samuel-ruiperez-campillo.jpeg" alt="Samuel Ruiperez-Campillo"><h4>Samuel Ruiperez-Campillo</h4><p class="person-affiliation">Massachusetts Institute of Technology, US</p><p class="person-role">Executive Co-Chair & Scientific Co-Chair</p><p class="flip-hint">Click to read bio</p></div><div class="flip-back"><h4>Samuel Ruiperez-Campillo</h4><p class="organizer-bio">Research Fellow at the MIT Institute for Medical Engineering and Science and PhD student at ETH Zurich. Samuel's work centers on multimodal and self-supervised learning for medical time-series and imaging, as well as generative and representation learning for medical applications. He studied at UC Berkeley and ETH Zurich as a &ldquo;la Caixa&rdquo; and &ldquo;Rafael del Pino&rdquo; Fellow. Before, he founded an AI-powered start-up in Silicon Valley and was a researcher in AI for Cardiology at Stanford University.</p><p class="flip-hint">Click to flip back</p></div></div></div>
+<div class="person-card flip-card" role="button" tabindex="0" aria-pressed="false" aria-label="Silke Muehlstedt: show bio"><div class="flip-inner"><div class="flip-front"><img class="organizer-photo" src="img/organizers/silke-muehlstedt.jpeg" alt="Silke Muehlstedt"><h4>Silke Muehlstedt</h4><p class="person-affiliation">ETH Zurich, CH</p><p class="person-role">Executive Co-Chair & Scientific Co-Chair</p><p class="flip-hint">Click to read bio</p></div><div class="flip-back"><h4>Silke Muehlstedt</h4><p class="organizer-bio">Scientific Affairs Manager at ETH Zurich's Institute for Machine Learning, where she manages interdisciplinary research initiatives at the interface of ML and clinical practice, working with academic and clinical stakeholders on research strategy, data governance, funding, and cross-institutional collaborations. Previously, she was Director of Research and Strategic Partnerships at the Mount Sinai Health System in New York City. Silke holds a PhD in Molecular Biology from Humboldt University/Charit&eacute; Berlin.</p><p class="flip-hint">Click to flip back</p></div></div></div>
+<div class="person-card flip-card" role="button" tabindex="0" aria-pressed="false" aria-label="Cristina Almagro-Perez: show bio"><div class="flip-inner"><div class="flip-front"><img class="organizer-photo" src="img/organizers/cristina-almagro-perez.jpeg" alt="Cristina Almagro-Perez"><h4>Cristina Almagro-Perez</h4><p class="person-affiliation">Harvard-MIT HST and Brigham and Women's Hospital, US</p><p class="person-role">Operations & Program Delivery Chair</p><p class="flip-hint">Click to read bio</p></div><div class="flip-back"><h4>Cristina Almagro-Perez</h4><p class="organizer-bio">PhD Candidate at Harvard-MIT Health Sciences and Technology and AI Researcher at the Brigham and Women's Hospital. Cristina's work focuses on 3D computational pathology, spatial biology, and representation learning for multimodal and multidimensional biological data. As a Rafael del Pino Excellence Fellow, her PhD work has been published in venues including Nature, Nature Medicine, and NeurIPS. Before, she earned an M.Sc. in Bioimaging as a &ldquo;la Caixa&rdquo; Fellow and was a researcher at ETH Zurich and Johns Hopkins University.</p><p class="flip-hint">Click to flip back</p></div></div></div>
+<div class="person-card flip-card" role="button" tabindex="0" aria-pressed="false" aria-label="Sonia Laguna: show bio"><div class="flip-inner"><div class="flip-front"><img class="organizer-photo" src="img/organizers/sonia-laguna.jpeg" alt="Sonia Laguna"><h4>Sonia Laguna</h4><p class="person-affiliation">Apple, FR</p><p class="person-role">Program Committee & External Relations Chair</p><p class="flip-hint">Click to read bio</p></div><div class="flip-back"><h4>Sonia Laguna</h4><p class="organizer-bio">ML Researcher at Apple and PhD student at ETH Zurich. Sonia's work focuses on building more controllable, interpretable, and adaptable models through generative modelling, representation learning, and machine unlearning, and on how models structure information to support steering and reliable post-deployment adaptation. During her PhD, she was a researcher at the University of Cambridge and a Research Intern at Google. Before, she completed an MSc in Biomedical Engineering and was a researcher at Harvard Medical School.</p><p class="flip-hint">Click to flip back</p></div></div></div>
 </div>
+
+<script>
+document.querySelectorAll('.flip-card').forEach(function (card) {
+    var name = card.querySelector('h4').textContent;
+    function toggle() {
+        var flipped = card.classList.toggle('is-flipped');
+        card.setAttribute('aria-pressed', flipped);
+        card.setAttribute('aria-label', name + (flipped ? ': show photo' : ': show bio'));
+    }
+    card.addEventListener('click', toggle);
+    card.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); }
+    });
+});
+</script>
 
 ### Senior Advisory Board
 
@@ -462,7 +541,7 @@ To be included after double-blind review.
 We gratefully acknowledge the support of our sponsors. Sponsor funds will go directly toward workshop awards and participant support.
 
 <div class="sponsor-grid">
-<div class="sponsor-card"><img class="sponsor-logo" src="img/quantco_logo.png" alt="QuantCo logo"><h4>QuantCo</h4><p class="sponsor-note">Confirmed sponsor supporting awards and participant support.</p></div>
+<div class="sponsor-card"><img class="sponsor-logo" src="img/quantco_logo.png" alt="QuantCo logo"><h4>QuantCo</h4><p class="sponsor-note">Confirmed sponsor (10,000+ USD) supporting awards and participant support.</p></div>
 <div class="sponsor-card"><h4>Additional Sponsorship</h4><p class="sponsor-note">Additional support is under discussion and will be added here once confirmed.</p></div>
 </div>
 
